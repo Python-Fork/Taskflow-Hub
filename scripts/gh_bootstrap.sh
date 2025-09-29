@@ -27,13 +27,6 @@ gh label create "docs" --force >/dev/null 2>&1 || true
 gh label create "enhancement" --force >/dev/null 2>&1 || true
 gh label create "bug" --force >/dev/null 2>&1 || true
 
-echo 'Creating milestones...'
-gh milestone create "Milestone 1 — MVP ядро" --description "API+Queue+Python worker" || true
-gh milestone create "Milestone 2 — Go воркеры" --description "Go worker + routing + gRPC pilot" || true
-gh milestone create "Milestone 3 — Auth & Quotas" --description "JWT, roles, rate limit" || true
-gh milestone create "Milestone 4 — Observability & UX" --description "Metrics, tracing, UI, CLI" || true
-gh milestone create "Milestone 5 — Orchestration & Deploy" --description "Workflows, scheduler, K8s" || true
-
 echo 'Creating M1 issues...'
 gh issue create -t "chore: init repo, tooling" -b "$(cat .github/ISSUE_TEMPLATE/task_body.md)" -m "Milestone 1 — MVP ядро" -l "chore" -l "infra" || true
 gh issue create -t "Скелет FastAPI + health" -b "$(cat .github/ISSUE_TEMPLATE/task_body.md)" -m "Milestone 1 — MVP ядро" -l "backend" -l "python" -l "api" || true
