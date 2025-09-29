@@ -13,11 +13,12 @@ install:
 	poetry install
 
 lint:
-	ruff src tests
+	ruff check src tests
 	black --check src tests
 	isort --check-only src tests
 
 fmt:
+	ruff check --fix src tests
 	black src tests
 	isort src tests
 
