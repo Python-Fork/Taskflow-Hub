@@ -1,5 +1,7 @@
 from starlette.testclient import TestClient
+
 from src.api.main import app
+
 
 def test_health():
     client = TestClient(app)

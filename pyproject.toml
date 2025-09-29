@@ -31,6 +31,9 @@ coverage = "^7.6.1"
 [tool.ruff]
 target-version = "py311"
 line-length = 100
+
+[tool.ruff.lint]
+# было extend-select в корне — теперь тут
 extend-select = ["I"]
 
 [tool.black]
