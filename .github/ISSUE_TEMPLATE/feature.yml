@@ -1,0 +1,78 @@
+﻿name: Feature request
+description: Новый функционал для TaskFlow Hub
+title: "[feat] Краткое название"
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: "Заполните все обязательные блоки — это ускорит оценку и планирование."
+  - type: textarea
+    id: summary
+    attributes:
+      label: Краткое описание
+      description: Проблема и ожидаемый эффект для пользователей.
+    validations:
+      required: true
+  - type: textarea
+    id: business_value
+    attributes:
+      label: Ценность / мотивация
+      description: Почему это важно сейчас? Что произойдёт, если не делать?
+    validations:
+      required: true
+  - type: dropdown
+    id: components
+    attributes:
+      label: Задействованные подсистемы
+      description: Выберите все подсистемы, которых коснётся работа.
+      multiple: true
+      options:
+        - API Gateway
+        - Python worker
+        - Go worker
+        - Broker
+        - Postgres
+        - MongoDB
+        - Redis
+        - Observability
+        - UI
+        - CLI
+        - CI/CD
+        - Другое
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Предлагаемое решение
+      description: Основные идеи, архитектурные заметки, альтернативы.
+    validations:
+      required: true
+  - type: checkboxes
+    id: impacts
+    attributes:
+      label: Обязательные проверки
+      options:
+        - label: Нужны миграции БД
+        - label: Нужны новые очереди/топики
+        - label: Требуется обновить конфиги (env, compose, Helm)
+        - label: Потребуются новые метрики/алерты
+        - label: Подготовить/обновить документацию
+  - type: textarea
+    id: testing
+    attributes:
+      label: План тестирования
+      description: Юнит/интеграционные тесты, end-to-end, ручные проверки, healthz.
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Критерии приемки
+      description: Что должно заработать, чтобы считать фичу завершённой.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Дополнительно
+      description: Зависимости, ссылки на RFC/PRD, риски, план релиза.

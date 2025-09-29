@@ -1,0 +1,33 @@
+name: Task
+description: Шаблон для задач из ROADMAP
+title: "[task] краткое название"
+labels: ["chore"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Скопируйте и заполните поля ниже.
+  - type: textarea
+    id: body
+    attributes:
+      label: Шаблон
+      description: Скопируйте заготовку ниже и заполните
+      value: |
+        ### Цель
+        Коротко, что и зачем делаем.
+
+        ### Результат
+        Критерии готовности (acceptance criteria).
+
+        ### Технические заметки
+        - Архитектура/схема данных/контракты
+        - Гипотезы, риски, trade-offs
+
+        ### Чеклист
+        - [ ] ...
+        - [ ] Тесты
+        - [ ] Логи/метрики
+        - [ ] Обновить документацию
+
+    validations:
+      required: true
