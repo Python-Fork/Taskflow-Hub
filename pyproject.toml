@@ -2,7 +2,8 @@
 name = "taskflow-hub"
 version = "0.1.0"
 description = "Mini task orchestrator with Python & Go workers"
-authors = ["You <you@example.com>"]
+authors = ["Alexandr153 <boss191105@bk.ru>"]
+license = "MIT"
 readme = "README.md"
 packages = [{ include = "src" }]
 

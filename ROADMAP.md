@@ -43,7 +43,7 @@
 * **Result**(id, task_id, storage(“mongo”|“s3”), ref, preview, size, ttl)
 * **Event/Audit**(id, entity, entity_id, action, meta, ts)
 
-## 5) Майлстоуны и задачи (создавай GitHub Issues по списку)
+## 5) Майлстоуны и задачи
 
 ### Milestone 1 — MVP ядро (API + очередь + один воркер Python)
 
